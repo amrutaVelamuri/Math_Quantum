@@ -26,6 +26,4 @@ latest_posts:
 
 Hi, I'm **Amruta Velamuri**, a high school researcher interested in **mathematics** and **quantum computing**.
 
-For the past three years I've been researching **Parkinson's disease**, and I'm especially interested in applying **quantum machine learning** to problems in medicine. My featured project compares a Variational Quantum Classifier to classical machine-learning models for detecting Parkinson's disease from gait data.
-
-Take a look at my [projects](/projects/) to see what I've been working on.
+I'm especially interested in applying **quantum machine learning** to real-world problems. Take a look at my [projects](/projects/) to see what I've been working on.
