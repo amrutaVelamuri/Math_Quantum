@@ -26,4 +26,4 @@ latest_posts:
 
 Hi, I'm **Amruta Velamuri**, a high school researcher interested in **mathematics** and **quantum computing**.
 
-I'm especially interested in applying **quantum machine learning** to real-world problems. Take a look at my [projects](/projects/) to see what I've been working on.
+I'm especially interested in applying **quantum machine learning** to real-world problems. Take a look at my [projects]({{ '/projects/' | relative_url }}) to see what I've been working on.
