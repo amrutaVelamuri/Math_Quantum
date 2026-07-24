@@ -15,11 +15,24 @@ category: work
 
 ## Background
 
-I've spent the last three years researching Parkinson's disease (PD). PD affects
-movement, and one of its clearest signatures is in **gait**, the way a person
-walks. For this mini project I added a **quantum twist** to that work: instead of
-only using classical machine-learning models, I trained a **Variational Quantum
-Classifier** and put it head-to-head with the classical models I usually rely on.
+**Parkinson's disease (PD)** is a progressive neurodegenerative disorder and the
+second most common one after Alzheimer's, affecting more than 10 million people
+worldwide. It develops when dopamine-producing neurons in a region of the brain
+called the *substantia nigra* gradually die off. Because dopamine helps control
+movement, losing it leads to the disease's hallmark motor symptoms: tremor,
+muscle rigidity, bradykinesia (slowness of movement), and problems with balance
+and posture.
+
+There is no single lab test for PD, so diagnosis is largely clinical and can be
+especially hard in the early stages. This is where **gait**, the way a person
+walks, becomes useful. PD changes gait in measurable ways: shorter, shuffling
+steps, reduced arm swing, and episodes of "freezing." Because sensors can capture
+these patterns objectively, gait data is a promising signal for detecting PD.
+
+I've spent the last three years researching Parkinson's disease. For this mini
+project I added a **quantum twist** to that work: instead of only using classical
+machine-learning models, I trained a **Variational Quantum Classifier** and put
+it head-to-head with the classical models I usually rely on.
 
 ## Data & Features
 
