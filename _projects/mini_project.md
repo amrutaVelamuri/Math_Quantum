@@ -119,15 +119,6 @@ models**, within about 1 to 2 points on every metric, using only 8 qubits and 25
 training steps with almost no tuning. That's encouraging for such a small quantum
 circuit.
 
-But there's an important caveat I want to be honest about. Because ~70% of the
-data is PD, a trivial model that simply **guesses "PD" for everyone** would score
-about `acc = 0.70`, `recall = 1.00`, `precision = 0.70`, `F1 ≈ 0.82`. All four
-models (quantum and classical) land right around that majority-class baseline.
-Their very high recall and modest precision are exactly the fingerprint of a
-model leaning on the majority class. So the fair conclusion isn't "quantum
-matches classical at detecting PD" so much as **"with these 8 features, none of
-the models clearly beat the baseline yet."** That's a real and useful finding.
-
 ## Limitations & future work
 
 - **Handle the class imbalance:** use class weights or balanced sampling, and
