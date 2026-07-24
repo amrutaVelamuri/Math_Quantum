@@ -10,22 +10,22 @@ profile:
   image_circular: true # crops the image to make it circular
   more_info: ""
 
-selected_papers: true # includes a list of papers marked as "selected={true}"
-social: true # includes social icons at the bottom of the page
+selected_papers: false # includes a list of papers marked as "selected={true}"
+social: false # includes social icons at the bottom of the page
 
 announcements:
-  enabled: true # includes a list of news items
+  enabled: false # includes a list of news items
   scrollable: true # adds a vertical scroll bar if there are more than 3 news items
   limit: 5 # leave blank to include all the news in the `_news` folder
 
 latest_posts:
-  enabled: true
+  enabled: false
   scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Hi, I'm **Amruta Velamuri**. Welcome to my portfolio. <!-- TODO: write your real bio here -->
+Hi, I'm **Amruta Velamuri**, a high school researcher interested in **mathematics** and **quantum computing**.
 
-I'm interested in **mathematics** and **quantum computing**. This page is a work in progress — edit `_pages/about.md` to tell your own story, add a profile photo at `assets/img/prof_pic.jpg`, and list your work under `_projects/` and `_bibliography/papers.bib`.
+For the past three years I've been researching **Parkinson's disease**, and I'm especially interested in applying **quantum machine learning** to problems in medicine. My featured project compares a Variational Quantum Classifier to classical machine-learning models for detecting Parkinson's disease from gait data.
 
-The theme supports social links (edit `_data/socials.yml`), a CV page, blog posts, and MathJax for LaTeX — for example $$e^{i\pi} + 1 = 0$$.
+Take a look at my [projects](/projects/) to see what I've been working on.
