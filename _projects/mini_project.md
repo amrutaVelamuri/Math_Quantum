@@ -48,11 +48,37 @@ per-foot means, and mean step-to-step change).
 ## Methods
 
 - Standardize features, then a stratified **75/25 train/test split**.
-- **Quantum model (VQC):** [PennyLane](https://pennylane.ai/), 8 qubits,
-  `AngleEmbedding` to load the features plus 3 `StronglyEntanglingLayers`, trained
-  with Adam for 25 steps against ±1 targets (mean-squared error).
 - **Classical baselines:** SVM, Logistic Regression (LR), and a small
   neural network (MLP).
+
+### The Quantum Model (VQC)
+
+A **Variational Quantum Classifier** is a quantum circuit whose gates have tunable
+parameters, trained much like a neural network. I built mine in
+[PennyLane](https://pennylane.ai/) on an 8-qubit simulator, one qubit per input
+feature. It has three parts:
+
+1. **Data encoding (`AngleEmbedding`).** Classical data can't go into a quantum
+   circuit directly, so each of the 8 standardized features is loaded as a
+   rotation angle on its own qubit. This turns a row of numbers into a quantum
+   state the circuit can process.
+2. **Trainable layers (`StronglyEntanglingLayers`, depth 3).** Three layers of
+   parameterized single-qubit rotations followed by entangling (CNOT-style) gates.
+   The entanglement lets qubits share information, and the rotation angles are the
+   circuit's *weights*, the numbers that get learned. Three layers gives the model
+   enough flexibility to separate the two classes without a huge parameter count.
+3. **Measurement.** I measure the expectation value of the Pauli-Z operator on the
+   first qubit, which returns a single number between **-1 and +1**, the model's
+   raw output.
+
+**Training.** I labeled the two classes as targets of **+1 (PD)** and **-1
+(control)**, then used the **mean-squared error** between the circuit's output and
+those targets as the cost. The **Adam optimizer** adjusted the rotation angles to
+minimize that cost over **25 iterations** across the training set (a loop very
+similar to gradient descent in a neural network).
+
+**Prediction.** For a new recording, the circuit outputs a number in [-1, 1]. If
+it is **greater than 0** the model predicts PD, otherwise it predicts control.
 
 ```python
 import numpy as np, pandas as pd, re, warnings; warnings.filterwarnings("ignore")
