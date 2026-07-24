@@ -1,8 +1,6 @@
 # Math_Quantum
 
-Personal academic portfolio site for mathematics and quantum computing, built
-with the [al-folio](https://github.com/alshedivat/al-folio) Jekyll theme and
-deployed with GitHub Pages.
+Personal academic portfolio site for mathematics and quantum computing.
 
 **Live site:** https://amrutavelamuri.github.io/Math_Quantum/
 
