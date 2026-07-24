@@ -2,12 +2,12 @@
 layout: page
 title: Quantum vs. Classical ML for Parkinson's Detection
 description: A Variational Quantum Classifier compared to classical SVM/NN on gait data
-img: assets/img/12.jpg
+img: assets/img/mini_project.jpg
 importance: 1
 category: work
 ---
 
-## Research question
+## Research Question
 
 > **How does a Variational Quantum Classifier (VQC) compare to a classical SVM
 > (and neural network) in Parkinson's disease detection from gait data, measured
@@ -21,7 +21,7 @@ walks. For this mini project I added a **quantum twist** to that work: instead o
 only using classical machine-learning models, I trained a **Variational Quantum
 Classifier** and put it head-to-head with the classical models I usually rely on.
 
-## Data & features
+## Data & Features
 
 I used the [PhysioNet *Gait in Parkinson's Disease*](https://physionet.org/content/gaitpdb/1.0.0/)
 database, which records vertical ground-reaction force from sensors under each
@@ -119,7 +119,7 @@ models**, within about 1 to 2 points on every metric, using only 8 qubits and 25
 training steps with almost no tuning. That's encouraging for such a small quantum
 circuit.
 
-## Limitations & future work
+## Limitations & Future Work
 
 - **Handle the class imbalance:** use class weights or balanced sampling, and
   report **balanced accuracy** and **ROC-AUC** instead of raw accuracy.
